@@ -13,10 +13,10 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Sistem Gereksinimleri ve Buildozer Kurulumu
+      - name: Sistem Gereksinimleri
         run: |
           sudo apt update
-          sudo apt install -y build-essential git python3 python3-dev ffmpeg libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev libgstreamer1.0-gstreamer-lite-dev libgstreamer1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good
+          sudo apt install -y build-essential git python3 python3-dev ffmpeg libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev
           pip install --upgrade pip
           pip install buildozer cython==0.29.33
 

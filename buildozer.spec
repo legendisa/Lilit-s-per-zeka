@@ -1,11 +1,21 @@
 [app]
-title = Lilit Singularity
-package.name = lilit.singularity
-package.domain = org.isayoruk
+title = Lilit
+package.name = lilit
+package.domain = org.isa
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
-version = 2.0
-requirements = python3,kivy,requests
-android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, CAMERA, RECORD_AUDIO
-android.archs = arm64-v8a
+version = 0.1
+requirements = python3,kivy
 orientation = portrait
+android.api = 31
+android.minapi = 21
+android.sdk = 31
+android.ndk = 23b
+# A7 32-bit olduğu için burası kritik:
+android.archs = armeabi-v7a
+android.allow_backup = True
+p4a.branch = master
+
+[buildozer]
+log_level = 2
+warn_on_root = 1

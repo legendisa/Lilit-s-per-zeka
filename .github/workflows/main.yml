@@ -1,11 +1,21 @@
-name: APK Derleyici
+name: Lilit Singularity Build
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Buildozer Action
-        uses: ArtemSerebrennkov/buildozer-action@v1
+      - name: Kodu Cek
+        uses: actions/checkout@v3
+
+      - name: Buildozer ile APK Derle
+        uses: Enas-A-Abdel-Magid/buildozer-action@v1.2
         with:
           command: android debug
+          buildozer_version: master
+
+      - name: APK Dosyasini Yukle
+        uses: actions/upload-artifact@v3
+        with:
+          name: Lilit-v2-Singularity
+          path: bin/*.apk
